@@ -1,0 +1,16 @@
+{
+  "name": "node-gdps",
+  "version": "1.0.0",
+  "description": "Geometry Dash server emulator written in Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./dbconnect.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
+}
