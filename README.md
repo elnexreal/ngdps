@@ -16,6 +16,6 @@ Geometry Dash server emulator, inspired by [Cvolton's Geometry Dash server emula
 
 [Cvolton](https://github.com/Cvolton) - Original idea and algorithms
 
-[Bcrypt](https://www.npmjs.com/package/bcrypt) - S
+[Bcrypt](https://www.npmjs.com/package/bcrypt) - Password encryption
 
 [expressjs](https://github.com/expressjs) - Base for the system
