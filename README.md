@@ -15,7 +15,7 @@ Geometry Dash server emulator, inspired by [Cvolton's Geometry Dash server emula
 
 ## Env file template
 
-`Your server URL needs to be exactly 13 (if you are replacing the base URL only)`
+`Your server URL needs to be exactly 13 characters long (if you are replacing the base URL only)`
 
 ```
 host: 'boomlengs.com'
