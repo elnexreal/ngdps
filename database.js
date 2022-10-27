@@ -1,5 +1,6 @@
 require('dotenv').config()
 const sql = require('mysql')
+const colors = require('colors')
 
 /* Set up the connection to the database */
 const connection = sql.createConnection({
@@ -13,8 +14,12 @@ const connection = sql.createConnection({
 /* Connect to the server */
 function connect() {
     connection.connect((err) => {
-        if (err) throw err
-        console.log(`Connected to database succesfully`)
+        if (err && err.code === 'ECONNREFUSED') {
+            console.log(`Couldn't connect to database in ${process.env.host}:${process.env.port}, check if the database server is running and try again...`.red)
+            process.exit()
+        } else {
+            console.log(`Connected to database succesfully.`.green)
+        }
     })
 }
 

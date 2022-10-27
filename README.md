@@ -8,9 +8,22 @@ Geometry Dash server emulator, inspired by [Cvolton's Geometry Dash server emula
 > Run ```npm i``` to install all the packages needed to run the server then run ```node .``` or ```node index.js``` to run the server
 
 ## Requirements
-- Node.js 16 or above
+- Node.js 16 or above (Not tested in < 15)
 - MySQL/MariaDB database
 - Edit the URL's in GeometryDash.exe (some of them are base64 encoded)
+- Set the .env variables
+
+## Env file template
+
+`Your server URL needs to be exactly 13 (if you are replacing the base URL only)`
+
+```
+host: 'boomlengs.com'
+port: '3306'
+user: 'username'
+password: 'password'
+database: 'geometrydash'
+```
 
 ### Credits
 

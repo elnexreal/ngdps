@@ -6,11 +6,13 @@ const PORT = 80;
 
 /* Start listening for requests */
 app.listen(
-    PORT, () => console.log(`The server is running on port ${PORT}`)
+    PORT, () => console.log(`The server is running on port ${PORT}.`.green)
 );
 
 /* Middleware function */
-app.use(require('body-parser').urlencoded({ extended: true }));
+app.use(require('body-parser').urlencoded({
+    extended: true
+}));
 
 /* Connect to the database */
 db.connect()
