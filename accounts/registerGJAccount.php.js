@@ -10,8 +10,6 @@ router.post('/', async (req, res) => {
     const password = exploitPatch.remove(req.body.password)
     // const email = exploitPatch.remove(req.body.email)
 
-    console.log(req.body)
-
     if (userName.length < 3 || password.length < 6) {
         return res.sendStatus(400)
     }
@@ -20,8 +18,9 @@ router.post('/', async (req, res) => {
         return res.sendStatus(400)
     }
 
-    const hashedPW = await bc.hash(password.toString(), 10)
-    console.log(hashedPW)
+    //fuck u fuck u fuck u fuck u fuck u
+    const hashedPW = await bc.hash(password, 10)
+    db.query("SELECT * FROM accounts WHERE userName LIKE userName")
 });
 
 module.exports = router;

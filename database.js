@@ -25,10 +25,13 @@ function connect() {
 
 /* Set up the query system to run commands on the db */
 /**
- *   @param {SQLQuery} query - Command to execute on the database
+ *   @param {String} query - Command to execute on the database
  */
+
 function query(query) {
-    connection.query(query)
+    connection.query(query, (err, res) => {
+        module.exports = { err, res }
+    })
 }
 
 module.exports = {
