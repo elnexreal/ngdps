@@ -1,0 +1,29 @@
+{
+	"extends": "@tsconfig/node16/tsconfig.json",
+	"ts-node": {
+		"transpileOnly": true,
+		"files": true,
+		"swc": true
+	},
+     "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts"],
+     "compilerOptions": {
+          "moduleResolution": "node",
+          "module": "Node16",
+          "lib": ["es2020"],
+		"target": "es2020",
+		"importsNotUsedAsValues": "error",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"rootDir": ".",
+		"allowJs": true,
+		"checkJs": true,
+		"paths": {
+			"$src/*": ["src/*"],
+			"$lib/*": ["src/lib/*"],
+			"$lib": ["src/lib"]
+		},
+     },
+}
