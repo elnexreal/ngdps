@@ -1,5 +1,5 @@
 import { exploitPatch } from "$lib/util";
-import { db } from "$lib";
+import * as db from "$lib/db";
 import * as bc from 'bcrypt';
 import type { NextFunction, Request, Response } from "express";
 
@@ -12,8 +12,8 @@ export default async function(req: Request, res: Response, next: NextFunction) {
           return res.sendStatus(400);
      }
 
-     const [ username, password ] = Object.values(req.body).map((v: string) => {
-          return exploitPatch.remove(v)
+     const [ username, password ] = Object.values(req.body).map(v => {
+          return exploitPatch.remove(v as string)
      });
 
      if (

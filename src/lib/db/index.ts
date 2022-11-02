@@ -11,10 +11,10 @@ let connection: SQL.Connection = SQL.createConnection({
 /**
  * @returns Whether or not the connection was successful.
  */
-export async function connect(): Promise<boolean> {
+export function connect(): Promise<boolean> {
      return new Promise((resolve, reject) => {
           connection.connect((err) => {
-               if (err) return reject(err);
+               if (!!err) return reject(err);
 
                return resolve(true);
           });

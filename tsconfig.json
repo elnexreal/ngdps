@@ -20,10 +20,12 @@
 		"rootDir": ".",
 		"allowJs": true,
 		"checkJs": true,
+		// Disable this in the future
+		"strict": false,
 		"paths": {
 			"$src/*": ["src/*"],
 			"$lib/*": ["src/lib/*"],
-			"$lib": ["src/lib"]
+			// "$lib": ["src/lib"]
 		},
      },
 }
