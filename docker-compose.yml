@@ -1,11 +1,19 @@
 version: '1'
 
 services:
+  web:
+    build: .
+    ports:
+      - "80:80"
   mysql:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=geometrydash
+    volumes:
+      - db-data:/mysql
+    ports:
+      - "3306:3306"
 
 volumes:
-  - /var/lib/mysql
+  db-data:
