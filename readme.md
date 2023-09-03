@@ -8,7 +8,7 @@ Geometry Dash server emulator, inspired by [Cvolton's Geometry Dash server emula
 ## Requirements
 - Node.js 18 `(recommended as 9/3/2023)`
 - MySQL/MariaDB database
-- Edit the URL's in GeometryDash.exe ([you can use GDSlEditor](https://github.com/elnexreal/GD-SLEditor))
+- Edit the URL's in GeometryDash.exe ([you can use GDSLEditor](https://github.com/elnexreal/GD-SLEditor))
 - Set the .env variables
 
 ## Credits
