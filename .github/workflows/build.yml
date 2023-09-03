@@ -30,10 +30,6 @@ jobs:
         run: |
           npm i
 
-      - name: Set environment variables
-        run: |
-          echo "DATABASE_URL=mysql://root:root@localhost/geometrydash" >> .env
-
       - name: Start prisma migrations
         run: |
           npx prisma db push
