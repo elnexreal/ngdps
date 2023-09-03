@@ -6,7 +6,7 @@ Geometry Dash server emulator, inspired by [Cvolton's Geometry Dash server emula
 > Run ```npm i``` to install all the dependencies<br> run ```node run server``` or ```ts-node src/index.ts``` to run the server
 
 ## Requirements
-- Node.js 16 or above (Not tested in < 15)
+- Node.js
 - MySQL/MariaDB database
 - Edit the URL's in GeometryDash.exe ([you can use GDSleditor](https://github.com/elnexreal/GD-SLEditor))
 - Set the .env variables
