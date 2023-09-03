@@ -1,4 +1,4 @@
-name: Test server on NodeJS 16
+name: Test server on NodeJS
 
 on:
   push:
