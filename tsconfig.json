@@ -1,0 +1,37 @@
+{
+	// THANKS https://github.com/john-bv
+	"extends": "ts-node/node16/tsconfig.json",
+	"ts-node": {
+		"transpileOnly": true,
+		"files": true,
+		"swc": true
+	},
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.ts"
+	],
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "Node16",
+		"lib": [
+			"es2020"
+		],
+		"target": "es2020",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"rootDir": ".",
+		"strict": false,
+		"paths": {
+			"$src/*": [
+				"src/*"
+			],
+			"$lib/*": [
+				"src/lib/*"
+			],
+			// "$lib": ["src/lib"]
+		},
+	},
+}
