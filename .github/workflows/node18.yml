@@ -1,4 +1,4 @@
-name: Test server
+name: Test server on NodeJS 18
 
 on:
   push:
@@ -20,15 +20,12 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-
-      - name: Install dependencies
-        run: |
-          npm i
+      - run: npm ci
 
       - name: Start prisma migrations
         run: |
