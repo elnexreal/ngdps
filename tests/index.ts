@@ -4,11 +4,13 @@ const app = express()
 
 prisma.$connect()
 
+console.log("CONNECTED TO DATABASE")
+
 app.use("/", (req, res) => {
 	res.send("Hello world!")
 })
 
 app.listen(8080, () => {
-	console.log("SUCCESS")
+	console.log("SERVER STARTED")
 	process.exit()
 })
