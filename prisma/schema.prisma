@@ -6,3 +6,7 @@ datasource db {
     provider = "mysql"
     url      = env("DATABASE_URL")
 }
+
+model Level {
+    id Int @id @default(autoincrement())
+}
