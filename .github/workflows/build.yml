@@ -34,6 +34,6 @@ jobs:
         run: |
           npx prisma db push
 
-      - name: Test server
+      - name: Test the server
         run: |
-          npm run server
+          npm run test
