@@ -1,0 +1,43 @@
+name: Test server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: geometrydash
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: |
+          npm i
+
+      - name: Set environment variables
+        run: |
+          echo "DATABASE_URL=mysql://root:root@localhost/geometrydash" >> .env
+
+      - name: Start prisma migrations
+        run: |
+          npx prisma db push
+
+      - name: Test server
+        run: |
+          npm run server
