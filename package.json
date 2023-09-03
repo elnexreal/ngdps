@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "server": "ts-node src/index.ts"
+    "server": "ts-node src/index.ts",
+    "update": "npx prisma generate; npx prisma db push"
   },
   "keywords": [],
   "author": "elnexreal",
