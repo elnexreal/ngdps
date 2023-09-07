@@ -8,8 +8,6 @@ RUN npm install
 
 COPY . .
 
-RUN npx prisma db push
+EXPOSE 80
 
-EXPOSE 3000
-
-CMD [ "npm", "run", "server" ]
+ENTRYPOINT [ "./entrypoint.sh" ]
