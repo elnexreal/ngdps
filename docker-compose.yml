@@ -1,10 +1,7 @@
-version: '1'
+version: '3'
 
 services:
-  web:
-    build: .
-    ports:
-      - "80:80"
+  # SET UP MYSQL
   mysql:
     image: mysql
     environment:
@@ -14,6 +11,20 @@ services:
       - db-data:/mysql
     ports:
       - "3306:3306"
+
+  # SET UP WEB SERVER
+  web:
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
+
+  # SET UP PHPMYADMIN
+  pma:
+    image: phpmyadmin
+    ports:
+      - "8080:80"
 
 volumes:
   db-data:
