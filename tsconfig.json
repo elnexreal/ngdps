@@ -11,7 +11,7 @@
 		"src/**/*.ts"
 	],
 	"compilerOptions": {
-		"moduleResolution": "node",
+		"moduleResolution": "Node16",
 		"module": "Node16",
 		"lib": [
 			"es2020"
